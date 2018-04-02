@@ -8,6 +8,9 @@ public class Post {
     private String photoTitle;
     private String photoDesc;
 
+
+
+    //method setter getter untuk post yang ada
     public String getPostId() {
         return postId;
     }

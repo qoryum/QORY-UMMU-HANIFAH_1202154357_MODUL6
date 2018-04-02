@@ -29,10 +29,10 @@ public class AuthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
 
-        // create new firebase instance
+        // membuat instance firebase
         auth = FirebaseAuth.getInstance();
 
-        // check if user already logged in
+        // mengecek apakah user sudah login
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(AuthActivity.this, MainActivity.class));
             finish();
@@ -43,7 +43,7 @@ public class AuthActivity extends AppCompatActivity {
         linkSignUp = findViewById(R.id.linkSignUp);
         btnLogin = findViewById(R.id.btnLogin);
 
-        // to sign up activity
+        // ke activity sign up
         linkSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +64,7 @@ public class AuthActivity extends AppCompatActivity {
         String email = loginEmail.getText().toString();
         final String password = loginPassword.getText().toString();
 
-        // checking fields
+        // check field alamat email yang ada
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(), "Your email is still empty",
                     Toast.LENGTH_SHORT).show();
@@ -74,12 +74,12 @@ public class AuthActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
 
-        // login user
+        // method untuk login ke aplikasi yang ada berdasarkan user dan password
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(AuthActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        // if login not success
+                        // yang dijalankan bila login gagal
                         if (!task.isSuccessful()) {
                             if (password.length() < 6) { // if password less than 6 chars
                                 loginPassword.setError(getString(R.string.minimum_password));
@@ -89,7 +89,7 @@ public class AuthActivity extends AppCompatActivity {
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
-                        // if login success
+                        // yang dijalankan bila login succes
                         else {
                             Intent intent = new Intent(AuthActivity.this, MainActivity.class);
                             startActivity(intent);

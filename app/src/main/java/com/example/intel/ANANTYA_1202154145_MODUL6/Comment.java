@@ -7,6 +7,7 @@ public class Comment {
     String username;
     String message;
 
+    //method setter dan getter untuk comment yang ada
     public String getPostId() {
         return postId;
     }
