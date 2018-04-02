@@ -1,8 +1,6 @@
 package com.example.intel.ANANTYA_1202154145_MODUL6;
 
-/**
- * Created by Intel on 01/04/2018.
- */
+
 
 public class Comment {
     String postId;

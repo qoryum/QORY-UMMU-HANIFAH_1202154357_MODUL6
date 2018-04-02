@@ -1,8 +1,5 @@
 package com.example.intel.ANANTYA_1202154145_MODUL6;
 
-/**
- * Created by Yuda on 31/03/2018.
- */
 
 public class Post {
     String postId;
