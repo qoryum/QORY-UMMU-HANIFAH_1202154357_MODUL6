@@ -1,4 +1,4 @@
-package com.example.intel.ANANTYA_1202154145_MODUL6;
+package com.example.hnf.qoryummuhanifah_1202154357_modul6;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Home");
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         userEmail = user.getEmail();

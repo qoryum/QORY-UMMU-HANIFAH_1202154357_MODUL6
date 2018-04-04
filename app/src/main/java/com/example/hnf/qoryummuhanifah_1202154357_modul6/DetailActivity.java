@@ -1,4 +1,4 @@
-package com.example.intel.ANANTYA_1202154145_MODUL6;
+package com.example.hnf.qoryummuhanifah_1202154357_modul6;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +45,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        setTitle("Detail Post");
 
         database = FirebaseDatabase.getInstance().getReference("comments");
 

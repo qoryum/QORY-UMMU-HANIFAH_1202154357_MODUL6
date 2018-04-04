@@ -1,4 +1,4 @@
-package com.example.intel.ANANTYA_1202154145_MODUL6;
+package com.example.hnf.qoryummuhanifah_1202154357_modul6;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,11 +13,13 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+
+
+public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
     Context context;
     List<Post> posts;
 
-    public MyAdapter(Context context, List<Post> posts) {
+    public PopularAdapter(Context context, List<Post> posts) {
         this.context = context;
         this.posts = posts;
     }
@@ -25,19 +27,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.my_item, parent, false);
+                .inflate(R.layout.recent_item, parent, false);
 
         return new ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         Post post = posts.get(position);
-        holder.myUsername.setText(post.getUsername());
-        holder.myPhotoTitle.setText(post.getPhotoTitle());
-        holder.myPhotoDesc.setText(post.getPhotoDesc());
+        holder.recentUsername.setText(post.getUsername());
+        holder.recentPhotoTitle.setText(post.getPhotoTitle());
+        holder.recentPhotoDesc.setText(post.getPhotoDesc());
 
-        Picasso.get().load(post.getPhoto()).into(holder.myPhoto);
+        Picasso.get().load(post.getPhoto()).into(holder.recentPhoto);
     }
 
     @Override
@@ -46,15 +48,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView myUsername, myPhotoDesc, myPhotoTitle;
-        ImageView myPhoto;
+
+        TextView recentUsername, recentPhotoDesc, recentPhotoTitle;
+        ImageView recentPhoto;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            myUsername = itemView.findViewById(R.id.myUsername);
-            myPhotoTitle = itemView.findViewById(R.id.myPhotoTitle);
-            myPhotoDesc = itemView.findViewById(R.id.myPhotoDesc);
-            myPhoto = itemView.findViewById(R.id.myPhoto);
+            recentUsername = itemView.findViewById(R.id.popularUsername);
+            recentPhotoTitle = itemView.findViewById(R.id.popularPhotoTitle);
+            recentPhotoDesc = itemView.findViewById(R.id.popularPhotoDesc);
+            recentPhoto = itemView.findViewById(R.id.popularPhoto);
             itemView.setOnClickListener(this);
         }
 

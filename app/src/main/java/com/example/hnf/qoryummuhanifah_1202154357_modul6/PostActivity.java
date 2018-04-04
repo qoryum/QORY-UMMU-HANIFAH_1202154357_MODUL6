@@ -1,4 +1,4 @@
-package com.example.intel.ANANTYA_1202154145_MODUL6;
+package com.example.hnf.qoryummuhanifah_1202154357_modul6;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -53,6 +53,7 @@ public class PostActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
+        setTitle("Post");
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         storageReference = FirebaseStorage.getInstance().getReference();

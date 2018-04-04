@@ -1,4 +1,4 @@
-package com.example.intel.ANANTYA_1202154145_MODUL6;
+package com.example.hnf.qoryummuhanifah_1202154357_modul6;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -28,6 +28,8 @@ public class AuthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
+
+        setTitle("Authentication");
 
         // membuat instance firebase
         auth = FirebaseAuth.getInstance();

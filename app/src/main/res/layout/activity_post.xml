@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.intel.ANANTYA_1202154145_MODUL6.PostActivity">
+    tools:context="com.example.hnf.qoryummuhanifah_1202154357_modul6.PostActivity">
 
     <ScrollView
         android:layout_width="0dp"

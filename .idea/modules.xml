@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ANANTYA_1202154145_MODUL6.iml" filepath="$PROJECT_DIR$/ANANTYA_1202154145_MODUL6.iml" />
+      <module fileurl="file://C:\Users\RZKNZL\AndroidStudioProjects\QORY UMMU HANIFAH_1202154357_MODUL6\ANANTYA_1202154145_MODUL6.iml" filepath="C:\Users\RZKNZL\AndroidStudioProjects\QORY UMMU HANIFAH_1202154357_MODUL6\ANANTYA_1202154145_MODUL6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QORY UMMU HANIFAH_1202154357_MODUL6.iml" filepath="$PROJECT_DIR$/QORY UMMU HANIFAH_1202154357_MODUL6.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
